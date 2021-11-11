@@ -7,10 +7,24 @@ public class media {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
 
+    /*
+    variaveis:  int    -> 1, 2, 3,...
+                double -> -1, 2.2, 3.25...
+                String -> Carlos, Jorge, mesa
+    */
+
+    // Lista de variaveis do código //
+        String nome;
         double n1,n2,n3,n4,media;
+
+    // Comandos de entrada de danos //
+        System.out.println("Informe seu nome: ");
+        nome = scan.next();
 
         System.out.println("sua primeira nota: ");
         n1 = scan.nextDouble();
+
+    // Comando de repetição para checagem de notas válidas //
             while ((n1 < 0) || (n1 > 10))
             {
             System.out.println("esta nota é invalida, digite uma nota valida: ");
@@ -38,21 +52,27 @@ public class media {
             System.out.println("esta nota é invalida, digite uma nota valida: ");
             n4 = scan.nextDouble();
             }
+
+    //Calculo da média //
         media = ((n1+n2+n3+n4)/4);
 
+    // Comando de analise de média e condição para respostas //
             if (media <= 5)
             {
-            System.out.println("a sua média é: " + media);
-            System.out.println("você esta reprovado.");
+            System.out.println("Nome: " + nome);
+            System.out.println("Média: " + media);
+            System.out.println("Você esta reprovado.");
             }
             else if (media < 7)
             {
-            System.out.println("a sua média é: " + media);
+            System.out.println("Nome: " + nome);
+            System.out.println("Média: " + media);
             System.out.println("você esta de recuperação.");
             }
             else
             {
-            System.out.println("a sua média é: " + media);
+            System.out.println("Nome: " + nome);
+            System.out.println("Média: " + media);
             System.out.println("você esta aprovado.");
             }
     }
