@@ -11,6 +11,7 @@ public class media {
     variaveis:  int    -> 1, 2, 3,...
                 double -> -1, 2.2, 3.25...
                 String -> Carlos, Jorge, mesa
+                boolean-> true, false
     */
 
     // Lista de variaveis do código //
@@ -25,6 +26,10 @@ public class media {
         n1 = scan.nextDouble();
 
     // Comando de repetição para checagem de notas válidas //
+    /*
+     || = ou
+     && = e
+     */
             while ((n1 < 0) || (n1 > 10))
             {
             System.out.println("esta nota é invalida, digite uma nota valida: ");
@@ -63,7 +68,7 @@ public class media {
             System.out.println("Média: " + media);
             System.out.println("Você esta reprovado.");
             }
-            else if (media < 7)
+            else if (media > 5 && media < 7)
             {
             System.out.println("Nome: " + nome);
             System.out.println("Média: " + media);
